@@ -90,8 +90,8 @@ function App() {
       newErrors.childAge = "Only whole numbers greater than 0 are allowed.";
     }
 
-    if (!/^\d{10}$/.test(formData.phone)) {
-      newErrors.phone = "Phone must be 10 digits (U.S. format).";
+    if (!/^\d{3}-\d{3}-\d{4}$/.test(formData.phone)) {
+      newErrors.phone = "Phone must be in the format XXX-XXX-XXXX.";
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {

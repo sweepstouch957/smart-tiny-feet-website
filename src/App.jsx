@@ -49,11 +49,32 @@ function App() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+
+    let formattedValue = value;
+
+    if (name === "phone") {
+      // Eliminar todo lo que no sea número
+      const digitsOnly = value.replace(/\D/g, "").slice(0, 10);
+
+      // Formatear a XXX-XXX-XXXX
+      if (digitsOnly.length <= 3) {
+        formattedValue = digitsOnly;
+      } else if (digitsOnly.length <= 6) {
+        formattedValue = `${digitsOnly.slice(0, 3)}-${digitsOnly.slice(3)}`;
+      } else {
+        formattedValue = `${digitsOnly.slice(0, 3)}-${digitsOnly.slice(
+          3,
+          6
+        )}-${digitsOnly.slice(6)}`;
+      }
+    }
+
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: formattedValue,
     }));
   };
+
   const validateForm = () => {
     const newErrors = {};
 

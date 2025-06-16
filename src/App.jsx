@@ -45,6 +45,7 @@ function App() {
     email: "",
     urgency: "",
   });
+  const [errors, setErrors] = useState({});
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -53,8 +54,39 @@ function App() {
       [name]: value,
     }));
   };
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!/^[a-zA-Z\s]+$/.test(formData.parentName)) {
+      newErrors.parentName = "Only letters are allowed.";
+    }
+
+    if (!/^[a-zA-Z\s]+$/.test(formData.childName)) {
+      newErrors.childName = "Only letters are allowed.";
+    }
+
+    if (!/^\d+$/.test(formData.childAge) || Number(formData.childAge) <= 0) {
+      newErrors.childAge = "Only whole numbers greater than 0 are allowed.";
+    }
+
+    if (!/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Phone must be 10 digits (U.S. format).";
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Invalid email format.";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) {
+      toast.error("❌ Please correct the errors in the form.");
+      return;
+    }
 
     const res = await fetch("https://sheetdb.io/api/v1/6vrzlnfq4hzzv", {
       method: "POST",
@@ -64,7 +96,6 @@ function App() {
 
     if (res.ok) {
       toast.success("✅ Your message has been sent successfully!");
-
       setFormData({
         parentName: "",
         childName: "",
@@ -73,9 +104,9 @@ function App() {
         email: "",
         urgency: "",
       });
+      setErrors({});
     } else {
       toast.error("❌ There was a problem submitting the form.");
-
     }
   };
 
@@ -729,7 +760,13 @@ function App() {
                         onChange={handleInputChange}
                         required
                       />
+                      {errors.parentName && (
+                        <p className="text-red-600 text-sm mt-1">
+                          {errors.parentName}
+                        </p>
+                      )}
                     </div>
+
                     <div>
                       <Input
                         type="text"
@@ -739,7 +776,13 @@ function App() {
                         onChange={handleInputChange}
                         required
                       />
+                      {errors.childName && (
+                        <p className="text-red-600 text-sm mt-1">
+                          {errors.childName}
+                        </p>
+                      )}
                     </div>
+
                     <div>
                       <Input
                         type="number"
@@ -749,7 +792,13 @@ function App() {
                         onChange={handleInputChange}
                         required
                       />
+                      {errors.childAge && (
+                        <p className="text-red-600 text-sm mt-1">
+                          {errors.childAge}
+                        </p>
+                      )}
                     </div>
+
                     <div>
                       <Input
                         type="tel"
@@ -759,7 +808,13 @@ function App() {
                         onChange={handleInputChange}
                         required
                       />
+                      {errors.phone && (
+                        <p className="text-red-600 text-sm mt-1">
+                          {errors.phone}
+                        </p>
+                      )}
                     </div>
+
                     <div>
                       <Input
                         type="email"
@@ -769,7 +824,13 @@ function App() {
                         onChange={handleInputChange}
                         required
                       />
+                      {errors.email && (
+                        <p className="text-red-600 text-sm mt-1">
+                          {errors.email}
+                        </p>
+                      )}
                     </div>
+
                     <div>
                       <Textarea
                         name="urgency"
@@ -780,6 +841,7 @@ function App() {
                         required
                       />
                     </div>
+
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"

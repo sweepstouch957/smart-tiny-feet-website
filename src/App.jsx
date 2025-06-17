@@ -717,7 +717,7 @@ function App() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Phone</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+1 (631) 746-7276</p>
                   </div>
                 </div>
 
@@ -727,7 +727,7 @@ function App() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Email</h4>
-                    <p className="text-gray-600">info@smarttinyfeet.com</p>
+                    <p className="text-gray-600">smarttinyfeetdaycare@gmail.com</p>
                   </div>
                 </div>
 
@@ -738,9 +738,7 @@ function App() {
                   <div>
                     <h4 className="font-semibold text-gray-800">Address</h4>
                     <p className="text-gray-600">
-                      123 Main Street
-                      <br />
-                      City, State 12345
+                     155 Fillmore ave. Deer Park, NY 11729
                     </p>
                   </div>
                 </div>
@@ -752,9 +750,7 @@ function App() {
                   <div>
                     <h4 className="font-semibold text-gray-800">Hours</h4>
                     <p className="text-gray-600">
-                      Monday - Friday: 7:00 AM - 6:00 PM
-                      <br />
-                      Saturday: 8:00 AM - 2:00 PM
+                      Monday - Friday: 7:30 AM - 6:00 PM
                     </p>
                   </div>
                 </div>
@@ -949,19 +945,17 @@ function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>+1 (555) 123-4567</li>
-                <li>info@smarttinyfeet.com</li>
+                <li>+1 (631) 746-7276</li>
+                <li>smarttinyfeetdaycare@gmail.com</li>
                 <li>
-                  123 Main Street
-                  <br />
-                  City, State 12345
+                  155 Fillmore ave. Deer Park, NY 11729
                 </li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Smart Tiny Feet Daycare. All rights reserved.</p>
+            <p>&copy; 2025 Smart Tiny Feet Daycare. All rights reserved.</p>
           </div>
         </div>
       </footer>

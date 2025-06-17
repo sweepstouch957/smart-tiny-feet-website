@@ -773,7 +773,7 @@ function App() {
                   <form
                     onSubmit={handleSubmit}
                     className="space-y-4"
-                    action="https://formsubmit.co/allan@sweepstouch.com"
+                    action="https://formsubmit.co/preyes@sweepstouch.com"
                     method="POST"
                   >
                     <div>

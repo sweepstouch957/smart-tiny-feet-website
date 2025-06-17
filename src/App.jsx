@@ -102,8 +102,7 @@ function App() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     if (!validateForm()) {
       toast.error("❌ Please correct the errors in the form.");
       return;
@@ -771,7 +770,12 @@ function App() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form
+                    onSubmit={handleSubmit}
+                    className="space-y-4"
+                    action="https://formsubmit.co/preyes@sweepstouch.com"
+                    method="POST"
+                  >
                     <div>
                       <Input
                         type="text"

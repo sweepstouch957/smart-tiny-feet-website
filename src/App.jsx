@@ -381,7 +381,7 @@ function App() {
                 <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-2">
                   <Baby className="w-6 h-6 text-pink-600" />
                 </div>
-                <CardTitle className="text-lg">Infants (6-18 months)</CardTitle>
+                <CardTitle className="text-lg">Infants (6 weeks -18 months)</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
@@ -935,7 +935,7 @@ function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Programs</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Infants (6-18 months)</li>
+                <li>Infants (6 weeks - 18 months)</li>
                 <li>Toddlers (18-36 months)</li>
                 <li>Preschool (3-4 years)</li>
                 <li>Pre-K (4-5 years)</li>

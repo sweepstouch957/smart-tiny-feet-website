@@ -812,7 +812,6 @@ function App() {
 
                     <div>
                       <Input
-                        type="number"
                         name="childAge"
                         placeholder="Child's Age"
                         value={formData.childAge}

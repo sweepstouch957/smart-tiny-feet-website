@@ -262,12 +262,14 @@ function App() {
                 their full potential with love and professional care.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
-                >
-                  Schedule Tour
-                </Button>
+                <a href="#contact">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                  >
+                    Schedule Tour
+                  </Button>
+                </a>
                 <Button
                   variant="outline"
                   size="lg"
@@ -381,7 +383,9 @@ function App() {
                 <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-2">
                   <Baby className="w-6 h-6 text-pink-600" />
                 </div>
-                <CardTitle className="text-lg">Infants (6 weeks -18 months)</CardTitle>
+                <CardTitle className="text-lg">
+                  Infants (6 weeks -18 months)
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
@@ -727,7 +731,9 @@ function App() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Email</h4>
-                    <p className="text-gray-600">smarttinyfeetdaycare@gmail.com</p>
+                    <p className="text-gray-600">
+                      smarttinyfeetdaycare@gmail.com
+                    </p>
                   </div>
                 </div>
 
@@ -738,7 +744,7 @@ function App() {
                   <div>
                     <h4 className="font-semibold text-gray-800">Address</h4>
                     <p className="text-gray-600">
-                     155 Fillmore ave. Deer Park, NY 11729
+                      155 Fillmore ave. Deer Park, NY 11729
                     </p>
                   </div>
                 </div>
@@ -947,9 +953,7 @@ function App() {
               <ul className="space-y-2 text-gray-400">
                 <li>+1 (631) 746-7276</li>
                 <li>smarttinyfeetdaycare@gmail.com</li>
-                <li>
-                  155 Fillmore ave. Deer Park, NY 11729
-                </li>
+                <li>155 Fillmore ave. Deer Park, NY 11729</li>
               </ul>
             </div>
           </div>

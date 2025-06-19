@@ -86,10 +86,6 @@ function App() {
       newErrors.childName = "Only letters are allowed.";
     }
 
-    if (!/^\d+$/.test(formData.childAge) || Number(formData.childAge) <= 0) {
-      newErrors.childAge = "Only whole numbers greater than 0 are allowed.";
-    }
-
     if (!/^\d{3}-\d{3}-\d{4}$/.test(formData.phone)) {
       newErrors.phone = "Phone must be in the format XXX-XXX-XXXX.";
     }

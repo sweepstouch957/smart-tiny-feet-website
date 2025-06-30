@@ -86,10 +86,6 @@ function App() {
       newErrors.childName = "Only letters are allowed.";
     }
 
-    if (!/^\d+$/.test(formData.childAge) || Number(formData.childAge) <= 0) {
-      newErrors.childAge = "Only whole numbers greater than 0 are allowed.";
-    }
-
     if (!/^\d{3}-\d{3}-\d{4}$/.test(formData.phone)) {
       newErrors.phone = "Phone must be in the format XXX-XXX-XXXX.";
     }
@@ -262,12 +258,14 @@ function App() {
                 their full potential with love and professional care.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
-                >
-                  Schedule Tour
-                </Button>
+                <a href="#contact">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700"
+                  >
+                    Schedule Tour
+                  </Button>
+                </a>
                 <Button
                   variant="outline"
                   size="lg"
@@ -381,7 +379,9 @@ function App() {
                 <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-2">
                   <Baby className="w-6 h-6 text-pink-600" />
                 </div>
-                <CardTitle className="text-lg">Infants (6-18 months)</CardTitle>
+                <CardTitle className="text-lg">
+                  Infants (6 weeks -18 months)
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
@@ -803,7 +803,6 @@ function App() {
 
                     <div>
                       <Input
-                        type="number"
                         name="childAge"
                         placeholder="Child's Age"
                         value={formData.childAge}
@@ -932,7 +931,7 @@ function App() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Programs</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Infants (6-18 months)</li>
+                <li>Infants (6 weeks - 18 months)</li>
                 <li>Toddlers (18-36 months)</li>
                 <li>Preschool (3-4 years)</li>
                 <li>Pre-K (4-5 years)</li>

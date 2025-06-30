@@ -727,7 +727,9 @@ function App() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">Email</h4>
-                    <p className="text-gray-600">smarttinyfeetdaycare@gmail.com</p>
+                    <p className="text-gray-600">
+                      smarttinyfeetdaycare@gmail.com
+                    </p>
                   </div>
                 </div>
 
@@ -738,7 +740,7 @@ function App() {
                   <div>
                     <h4 className="font-semibold text-gray-800">Address</h4>
                     <p className="text-gray-600">
-                     155 Fillmore ave. Deer Park, NY 11729
+                      155 Fillmore ave. Deer Park, NY 11729
                     </p>
                   </div>
                 </div>
@@ -766,12 +768,7 @@ function App() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form
-                    onSubmit={handleSubmit}
-                    className="space-y-4"
-                    action="https://formsubmit.co/smarttinyfeetdaycare@gmail.com"
-                    method="POST"
-                  >
+                  <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <Input
                         type="text"
@@ -947,9 +944,7 @@ function App() {
               <ul className="space-y-2 text-gray-400">
                 <li>+1 (631) 746-7276</li>
                 <li>smarttinyfeetdaycare@gmail.com</li>
-                <li>
-                  155 Fillmore ave. Deer Park, NY 11729
-                </li>
+                <li>155 Fillmore ave. Deer Park, NY 11729</li>
               </ul>
             </div>
           </div>

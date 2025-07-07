@@ -98,7 +98,8 @@ function App() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+     e.preventDefault()
     if (!validateForm()) {
       toast.error("❌ Please correct the errors in the form.");
       return;
